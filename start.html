@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Peach PHP</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Peach </span><span class="text-bold">PHP</span>
+                        </a>
+                    </h1>
+
+                </div>
+                <!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Documentation</li>
+                </ol>
+
+                <!-- <div class="top-search-box">
+                    <form class="form-inline search-form justify-content-center" action="" method="get">
+
+                        <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+
+                        <button type="submit" class="btn search-btn" value="Search"><i
+                                class="fas fa-search"></i></button>
+
+                    </form>
+                </div> -->
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Documentation</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: June 2nd, 2020</div>
+                </div>
+                <!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Download</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Welcome! Peach is a tiny and powerful PHP micro-framework created and maintained
+                                        by <a href="http://saurass.in">Saurabh Srivastava</a>. It attempts to comply
+                                        with PSR-1, PSR-2,
+                                        PSR-3 and PSR-4. It is based on the MVC design architecture pattern. You can
+                                        download this framework simply by clicking the link below.
+                                        Or you can even clone it from <a
+                                            href="https://github.com/peach-PHP/peach-PHP">GitHub</a> repository.
+                                    </p>
+                                    <a href="https://github.com/peach-PHP/peach-PHP" class="btn btn-green"
+                                        target="_blank"><i class="fas fa-download"></i> Download
+                                        Peach PHP</a>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1" class="section-block">
+                                    <h3 class="block-title">Step One</h3>
+                                    <p>
+                                        Peach is compatible with latest version of PHP (7.4) and recommends it's usage.
+                                        This guide assumes that the user is running atleast PHP 7.2 which is requirement
+                                        for the framework.
+                                        You need to install <a href="https://getcomposer.org/">Composer</a>, which is a
+                                        dependency manager for PHP
+                                        applications. Now go ahead and fire up a terminal in your project directory.
+                                    </p>
+
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="step2" class="section-block">
+                                    <h3 class="block-title">Step Two</h3>
+                                    <p>Now that we have our Peach project and we have installed Composer; it's time to
+                                        install our application. Peach uses very less third-party dependencies to make
+                                        it lightweight.
+                                        This steps assumes that the user is connected to the internet.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Enter Following commands in your Project directory:</h6>
+                                        <p><code>composer install</code></p>
+                                        <p><code>composer dump-autoload -o</code></p>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <h6>Un-ordered list example</h6>
+                                            <ul class="list">
+                                                <li>Lorem ipsum dolor sit amet.</li>
+                                                <li>Aliquam tincidunt mauris.</li>
+                                                <li>Ultricies eget vel aliquam libero.
+                                                    <ul>
+                                                        <li>Turpis pulvinar</li>
+                                                        <li>Feugiat scelerisque</li>
+                                                        <li>Ut tincidunt</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Pellentesque habitant morbi.</li>
+                                                <li>Praesent dapibus, neque id.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <h6>Ordered list example</h6>
+                                            <ol class="list">
+                                                <li>Lorem ipsum dolor sit amet.</li>
+                                                <li>Aliquam tincidunt mauris.</li>
+                                                <li>Ultricies eget vel aliquam libero.
+                                                    <ul>
+                                                        <li>Turpis pulvinar</li>
+                                                        <li>Feugiat scelerisque</li>
+                                                        <li>Ut tincidunt</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Pellentesque habitant morbi.</li>
+                                                <li>Praesent dapibus, neque id.</li>
+                                            </ol>
+                                        </div>
+                                    </div> -->
+                                    <!--//row-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="step3" class="section-block">
+                                    <h3 class="block-title">Step Three</h3>
+                                    <p>
+                                        Now that we have installed our application, we are all setup for starting our
+                                        application. Go ahead in the terminal and shoot up following command to start
+                                        your Peach applcation.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Enter Following command</h6>
+                                        <p><code>php peach serve -p 8000</code></p>
+                                    </div>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Configuration</h2>
+                                <div class="section-block">
+                                    <p>
+                                        In peach there are three basic configurations that needs to be satisfied. One
+                                        for
+                                        <b>Application Name</b>, next one is for <b>Database Connectivity</b> and third
+                                        is for
+                                        <b>Debug</b>
+                                        options.
+                                        These configurations are applied to the very start of our application. The
+                                        purpose of this is to
+                                        allow for clean separation of concerns and reusability of configuration logic.
+
+                                    </p>
+                                    <p>
+                                        To facilitate ease of reuse for groupings of configuration, Peach provides
+                                        interface to <b>.env</b> file. This ensures that your sensitive information is
+                                        securely
+                                        placed on web server
+                                    </p>
+                                    <p>
+                                        For a Peach application to function properly, the Env Injector will
+                                        need some configuration. This configuration can be found in file
+                                        <b>.env.example</b> ;
+                                        Copy it's content to a new file <b>.env</b>
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                                <div id="html" class="section-block">
+
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div>
+                                        <!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Useful Tip:</h4>
+                                            <p>It is a good practice that Peach recommends to place <b>.env</b> file in
+                                                the very root directory of the project</p>
+                                        </div>
+                                        <!--//content-->
+                                    </div>
+                                    <div class="code-block">
+                                        <h6>Sample .env file</h6>
+                                        <pre><code class="language-markup">
+NAME=APP_NAME
+
+DB_TYPE=mysql
+DB_HOST=127.0.0.1
+DB_NAME=databse
+DB_USER=root
+DB_PASS=
+
+DEBUG=TRUE
+                                        </code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+
+                            </section>
+                            <!--//doc-section-->
+                            <section id="callouts-section" class="doc-section">
+                                <h2 class="section-title">Bootstrap</h2>
+                                <div class="section-block">
+                                    <p>
+                                        As soon as the Peach application boots, the dependencies and <b>singletons</b>
+                                        are
+                                        loaded in to the memory. This gives us <b>high optimizations</b>, saving
+                                        <b>unnecessary memory wastage</b>, lowers the <b>lag time</b> and thus ensuring
+                                        <b>quick response</b>.
+                                    </p>
+                                    <p>
+                                        The bootstraping of Peach occurs in two steps.
+                                    <ul>
+                                        <li>Loading our dependencies</li>
+                                        <li>Booting our application with <b>Routes, Controllers</b> and <b>Models</b>
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </div>
+
+                                <div id="php" class="section-block">
+                                    <div class="code-block">
+                                        <h6>A self-explanatory insight of /index.php in root directory</h6>
+                                        <pre><code class="language-php">&lt;?php 
+/*
+|--------------------------------------------------------------------------
+|    Initialize Routes array here !!!
+|--------------------------------------------------------------------------
+*/
+$g_routes = [];
+                                            
+/*
+|--------------------------------------------------------------------------
+|    Base URI defining here !!
+|--------------------------------------------------------------------------
+*/
+define('BASE_DIR', substr(getcwd(), strrpos(getcwd(), '\\') + 1));
+
+/*
+|--------------------------------------------------------------------------
+|    Application ignites here !!
+|--------------------------------------------------------------------------
+*/
+require_once __DIR__ . '/vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+|    Starting the application instance
+|--------------------------------------------------------------------------
+*/
+require_once __DIR__ . '/app/autoload.php';
+?&gt;</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+
+
+                            </section>
+                            <!--//doc-section-->
+                            <section id="tables-section" class="doc-section">
+                                <h2 class="section-title">Routes</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Routes in Peach are stored as associative array in the main memory and are
+                                        singleton, which provides quick responses to our requests.
+                                        The most basic Peach routes accept a URI and a Closure, providing a very
+                                        simple and expressive method of defining routes:
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>A simple foo route with function definition</h6>
+                                        <pre><code class="language-php">&lt;?php 
+Route::get('/foo', function() {
+    echo "Hello Peach";
+});
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <h4>Default Route Files</h4>
+                                <div class="section-block">
+                                    <p>
+                                        All Peach routes are defined in your route files, which are located in the
+                                        routes directory. These files are automatically loaded by the framework. The
+                                        <b>src/routes/route.php</b> file defines routes that are for your web interface
+                                        . The routes in <b>src/routes/route.php</b> can also be used as stateless for
+                                        <b>API</b> development
+                                    </p>
+                                    <p>
+                                        Peach provides a very <b>simple</b>, <b>interactive</b> and <b>modular</b> way
+                                        of presenting our
+                                        routes. You can simply state which controller functions to be called right in
+                                        the routes definition in a much <b>cleaner and consice</b> form.
+                                    </p>
+                                    <div class="code-block">
+                                        <!-- <h6>A simple foo route with function definition</h6> -->
+                                        <pre><code class="language-php">&lt;?php 
+Route::get('/', 'HomeController@index');
+Route::get('/foo', 'HomeController@foo');
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <h4>Available Router Methods</h4>
+                                <div class="section-block">
+                                    <p>
+                                        The router allows you to register routes that respond to any HTTP verb:
+                                    </p>
+                                    <!-- <p>
+                                        Peach provides a very <b>simple</b>, <b>interactive</b> and <b>modular</b> way
+                                        of presenting our
+                                        routes. You can simply state which controller functions to be called right in
+                                        the routes definition in a much <b>cleaner and consice</b> form.
+                                    </p> -->
+                                    <div class="code-block">
+                                        <h6>Available route methods</h6>
+                                        <pre><code class="language-php">&lt;?php 
+Route::get($uri, $callback);
+Route::post($uri, $callback);
+Route::put($uri, $callback);
+Route::delete($uri, $callback);
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="buttons-section" class="doc-section">
+                                <h2 class="section-title">Models</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Peach uses <b>ORM</b> which provides a beautiful, simple ActiveRecord
+                                        implementation for working with your database. Each database table has a
+                                        corresponding "Model" which is used to interact with that table. Models allow
+                                        you to query for data in your tables, as well as insert new records into the
+                                        table.
+
+                                        Before getting started, be sure to configure a database connection in
+                                        <b>.env</b> file.
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <h4>Defining Models</h4>
+                                    <p>
+                                        To get started, let's create an Eloquent model. Models live in the
+                                        <b>src/models</b>
+                                        directory, you can place them anywhere that can be auto-loaded
+                                        according to composer.json file. All models extend
+                                        Illuminate\Database\Eloquent\Model class.
+                                    </p>
+                                    <p>
+                                        The easiest way to create a model instance is using the <b>make:model</b>
+                                    </p>
+                                    <p>
+                                        <code>php peach make:model Flight</code>
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <h4>Peach Models Conventions</h4>
+                                    <p>
+                                        Now, let's look at an example <b>Flight</b> model in
+                                        <b>/src/models/Flight.php</b>, which we will use to retrieve and
+                                        store information from our flights database table:
+                                    </p>
+                                    <p>
+                                        By default models automatically target the plural name of the table in database.
+                                    </p>
+
+                                </div>
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>A models example</h6>
+                                        <pre><code class="language-php">&lt;?php 
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Flight extends Model
+{
+    // That which can be filled by the appplication
+    protected $fillable = ['name', 'from', 'to', 'pilotname'];
+    
+    // The sensitive information never to be extracted
+    protected $hidden = ['pilotname'];
+}
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <h4>Querying with Peach ORM</h4>
+                                <div class="section-block">
+                                    <p>
+                                        Peach supports beautiful ORM for querying with Models. We use builder patten
+                                        that makes querying beautiful and fun to work with.
+                                        Peach supports few basic query builders as given below, which are self
+                                        explanatory.
+                                    </p>
+                                    <div class="code-block">
+                                        <!-- <h6>A simple foo route with function definition</h6> -->
+                                        <pre><code class="language-php">&lt;?php 
+use App\Flight;
+
+// Retrive all corresponding data
+Flight::where('name', 'ind-pak')->get();
+
+// To save a new entry to DB
+Flight::create([
+    'name' => 'pak-ind',
+    'from' => 'India',
+    'to' => 'pakistan',
+    'pilotname' => 'James Bond'
+]);
+
+// To update existing entries
+Flight::update([
+    'pilotname' => 'Captain America'
+])->where('name', 'ind-pak');
+
+// To delete existing entries
+Flight::where('name', 'ind-pak')
+    ->delete();
+
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="video-section" class="doc-section">
+                                <h2 class="section-title">Controllers</h2>
+                                <div class="section-block">
+
+                                    <p>
+                                        Instead of defining all of your request handling logic as Closures in route
+                                        files, you may wish to organize this behavior using Controller classes.
+                                        Controllers can group related request handling logic into a single class.
+                                        Controllers are stored in the <b>/src/controllers/</b> directory.
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <h4>Calling Controller Functions in Routes</h4>
+                                    <p>
+                                        Peach provides a beautiful yet efficient way of calling controller functions
+                                        via the routes. In routes you can either define a callback function directly
+                                        or may pass controller function as param like, <b>FlightController@foo</b>.
+                                        This is the recommended approach for usage.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Invoking Controllers via the Routes</h6>
+                                        <pre><code class="language-php">&lt;?php
+use App\Route;
+
+Route::get('/', 'FlightController@foo');
+Route::get('/abc', 'FlightController@bar');
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="section-block">
+                                    <h4>Defining Controllers</h4>
+                                    <p>
+                                        Below is an example of a basic controller class. Note that the controller
+                                        extends the base controller class included with Peach. The base class provides
+                                        a few convenience methods such as <b>view()</b> method, which may be used to
+                                        call views in controllers:
+                                    </p>
+                                    <p>
+                                        The easiest way to create a model instance is using the <b>make:controller</b>
+                                    </p>
+                                    <p>
+                                        <code>php peach make:controller FlightController</code>
+                                    </p>
+                                    <p>
+                                        Controllers are intended to encapsulate all the required logic related to a
+                                        model under one file.
+                                        All the bussiness logic required to process a request are presented as different
+                                        functions in the
+                                        desired controller.
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>A controller example</h6>
+                                        <pre><code class="language-php">&lt;?php 
+use App\Controller;
+use App\Flight;
+
+class FlightController extends Controller
+{
+    public function foo()
+    {
+        //
+    }
+}
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="section-block">
+                                    <h4>Calling Views in Controllers</h4>
+                                    <p>
+                                        Controllers make it super easy to call views. We can even pass required data to
+                                        the view tepmplate which is further rendered by th templating engine.
+                                        Below example shows calling views in controllers:
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>View Call in controller example</h6>
+                                        <pre><code class="language-php">&lt;?php 
+use App\Controller;
+
+class FlightController extends Controller
+{
+    public function foo()
+    {
+        $data1 = "abc";
+        $data2 = "xyz";
+        return view('welcome.view.php', ["d1" => $data1, "d2" => $data2]);
+    }
+}
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="icons-section" class="doc-section">
+                                <h2 class="section-title">Views</h2>
+                                <div class="section-block">
+
+                                    <p>
+                                        Views contain the HTML served by your application and separate your controller /
+                                        application logic from your presentation logic. Views are stored in the
+                                        <b>src/resources/views</b> directory. A simple view might look something like
+                                        this:
+                                    </p>
+                                </div>
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>A simple view example</h6>
+                                        <pre><code class="language-markup">&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, {{ name }}&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                                    </div>
+                                </div>
+                                <div class="section-block">
+                                    <h4>Passing variables to Views</h4>
+                                    <p>
+                                        As discussed above, peach makes it absolutely simple to pass variables to view
+                                        templates. These variables are accessible through out the called view instance.
+                                    </p>
+                                </div>
+
+                                <div class="section-block">
+                                    <div class="code-block">
+                                        <h6>Passing variables from controllers to views</h6>
+                                        <pre><code class="language-php">&lt;?php 
+use App\Controller;
+
+class FlightController extends Controller
+{
+    public function foo()
+    {
+        $name = "Saurabh Srivastava";
+        return view('welcome.view.php', ["name" => $name]);
+    }
+}
+?&gt;</code></pre>
+                                    </div>
+                                </div>
+
+
+                                <div class="section-block">
+                                    <h4>Caching Views in Peach</h4>
+                                    <p>
+                                        Instead of compiling views again and again, to serve each request, peach
+                                        believes that such
+                                        tasks must me cached. The views are cached in directory <b>/storage/cache</b>.
+                                        It is recommended That
+                                        these files are never temperred.
+                                    </p>
+                                </div>
+
+                                <!--//section-block-->
+                            </section>
+
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#download-section">Download</a>
+                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">Step One</a>
+                                    <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                    <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#code-section">Configuration</a>
+                                <!-- <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#html">HTML</a>
+                                    <a class="nav-link scrollto" href="#css">CSS</a>
+                                    <a class="nav-link scrollto" href="#sass">Sass</a>
+                                    <a class="nav-link scrollto" href="#less">LESS</a>
+                                    <a class="nav-link scrollto" href="#javascript">JavaScript</a>
+                                    <a class="nav-link scrollto" href="#python">Python</a>
+                                    <a class="nav-link scrollto" href="#php">PHP</a>
+                                    <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
+                                </nav> -->
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#callouts-section">Bootstrap</a>
+                                <a class="nav-link scrollto" href="#tables-section">Routes</a>
+                                <a class="nav-link scrollto" href="#buttons-section">Models</a>
+                                <a class="nav-link scrollto" href="#video-section">Controllers</a>
+                                <a class="nav-link scrollto" href="#icons-section">Views</a>
+                            </nav>
+                            <!--//doc-menu-->
+
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://saurass.in"
+                    target="_blank">Saurabh Srivastava</a> for developers</small>
+
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
